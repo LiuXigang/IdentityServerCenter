@@ -29,7 +29,9 @@ namespace IdentityServerCenter
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiResources(Config.GetResources())
-                .AddInMemoryClients(Config.GetClients());//http://localhost:5000/.well-known/openid-configuration
+                .AddInMemoryClients(Config.GetClients())
+                .AddTestUsers(Config.GetTestUsers())
+                ;//http://localhost:5000/.well-known/openid-configuration
 
 
 
